@@ -1,8 +1,12 @@
 <template>
+  <!-- {{}} -->
+  <h4>{{blog[$route.params.id].title}}</h4>
+  <p>{{blog[$route.params.id].date}}</p>
+  <hr>
   <div>
-    안녕하세요.<br>
-    오늘은 즐거운 금요일입니다.
+    {{blog[$route.params.id].content}}
   </div>
+  <hr>
   <div class="mt-4">
     <router-link to="/list">List</router-link>
   </div>

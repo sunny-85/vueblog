@@ -2,6 +2,7 @@ import { createRouter, createWebHistory } from 'vue-router'
 import List from '../components/blogText.vue'
 import Home from '../components/blogHome.vue'
 import Detail from '../components/blogDetail.vue'
+import None from '../components/pageNone.vue'
 
 const routes = [
     {
@@ -13,8 +14,12 @@ const routes = [
       component: Home // [로드 파일]
     },
     {
-      path: "/detail", // [경로]
+      path: "/detail/:id", // url 파라미터
       component: Detail // [로드 파일]
+    },
+    {
+      path: "/:anything(.*)", // url 파라미터
+      component: None // [로드 파일]
     }
   ];
 
